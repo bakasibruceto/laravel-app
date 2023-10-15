@@ -6,6 +6,7 @@
 
 #loadingSpinner{
  display:none;
+ 
 }
 
 .custom-spinner {
@@ -26,11 +27,13 @@
     display: inline-block;
 }
 
-/* .spinner img {
-    max-width: 100%;
-} */
-
 .spinner-text {
     font-size: 16px;
     color: #333;
+}
+
+.logo {
+    height: 150px;
+    max-height: 150px;
+    width: 160px;
 }

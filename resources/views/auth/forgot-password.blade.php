@@ -31,13 +31,6 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('passwordResetForm');
-            const spinner = document.getElementById('loadingSpinner');
-
-            form.addEventListener('submit', function(event) {
-                spinner.style.display = 'block';
-            });
-        });
+       
     </script>
 </x-guest-layout>
