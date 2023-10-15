@@ -15,7 +15,7 @@ new vendor file will be inserted to `resoureces/views`
 
 To cuztomize default breeze verify email and reset password
 
-> click vendor outside app folder
+> click vendor outside app folder and navigate
 
     vendor/laravel/framework/src/illuminate/Auth/notifications
 
