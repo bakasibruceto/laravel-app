@@ -18,7 +18,7 @@ To cuztomize default breeze verify email and reset password
 
 you will find `ResetPassword.php` and `VerifyEmail.php`
 		
-copy the code insde the class and copy necessary use cases to you new notification file
+copy the code insde the class and copy necessary use cases to your new notification file
 
 go to user model add
 
