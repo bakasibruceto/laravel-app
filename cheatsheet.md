@@ -1,6 +1,6 @@
 # Laravel 10
 
-## Cuztomize Email Template
+## Cuztomize Email Template Breeze
 Type to Terminal
     php artisan vendor:publish
 > laravel-mail 12 <br />
@@ -10,7 +10,7 @@ new vendor file will be inserted to `resoureces/views`
 
     php artisan make:notification classname
 
-For verify email and reset password
+To cuztomize default breeze verify email and reset password
 
 > click vendor outside app folder
 
@@ -20,7 +20,7 @@ you will find `ResetPassword.php` and `VerifyEmail.php`
 		
 copy the code insde the class and copy necessary use cases to you new notification file
 
-go to user model add and modify the code
+go to user model add
 
 
     public function sendPasswordResetNotification($token){
