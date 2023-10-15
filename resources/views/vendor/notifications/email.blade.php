@@ -6,7 +6,7 @@
 @if ($level === 'error')
 # @lang('Whoops!')
 @else
-# @lang('Hi!')
+# @lang('Hello!')
 @endif
 @endif
 
@@ -21,7 +21,7 @@
 <?php
     $color = match ($level) {
         'success', 'error' => $level,
-        default => 'primary',
+        default => 'blue',
     };
 ?>
 <x-mail::button :url="$actionUrl" :color="$color">

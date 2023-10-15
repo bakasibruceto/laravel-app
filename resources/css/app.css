@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* resources/css/app.css */
+
+#loadingSpinner{
+ display:none;
+}
+
+.custom-spinner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center vertically within the viewport */
+}
+
+.spinner-container {
+    text-align: center;
+}
+
+.spinner {
+    width: 15px; /* Set your desired width */
+    height: 15px; /* Set your desired height */
+    display: inline-block;
+}
+
+/* .spinner img {
+    max-width: 100%;
+} */
+
+.spinner-text {
+    font-size: 16px;
+    color: #333;
+}
