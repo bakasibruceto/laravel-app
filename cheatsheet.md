@@ -2,8 +2,11 @@
 
 ## Cuztomize Email Template Breeze
 Type to Terminal
+
     php artisan vendor:publish
+choose
 > laravel-mail 12 <br />
+
 > laravel-notifications 13
 
 new vendor file will be inserted to `resoureces/views`
