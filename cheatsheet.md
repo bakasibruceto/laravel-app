@@ -11,6 +11,8 @@ choose
 
 new vendor file will be inserted to `resoureces/views`
 
+Will create a notifcation folder inside app and create class
+
     php artisan make:notification classname
 
 To cuztomize default breeze verify email and reset password
