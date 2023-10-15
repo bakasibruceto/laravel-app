@@ -23,6 +23,23 @@
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
+        <div class="grid grid-cols-2 gap-20 mt-3">
+            <div class="flex items-center">
+                <label for="remember_me" class="inline-flex items-center">
+                    <input id="remember_me" type="checkbox"
+                        class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                </label>
+            </div>
+            <div class= "" >
+                @if (Route::has('password.request'))
+                <a class="flex items-end underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    href="{{ route('password.request') }}">
+                    {{ __('Forgot your password?') }}
+                </a>
+            @endif
+            </div>
+        </div>
 
         <div class="flex justify-center items-center mt-3">
             <x-primary-button class="w-full">
@@ -31,40 +48,26 @@
                 </div>
             </x-primary-button>
         </div>
+
         
 
 
-
-        <div class="flex items-center justify-center mt-1">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-
-        </div>
+     
 
         @auth
             <a href="{{ url('/dashboard') }}" class="btn btn-primary">Dashboard</a>
         @else
             @if (Route::has('register'))
                 <div class="flex items-center justify-center mt-3 ">
-                    <a href="{{ route('register') }}" class="btn btn-secondary bg-green-800 hover:bg-green-700">Register</a>
+                   <p>Don't have account?&nbsp;</p>  
+                   <a href="{{ route('register') }}" class=""><u><b>Register</b></u></a>
                 </div>
             @endif
         @endauth
 
 
         <!-- Remember Me -->
-        {{-- <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox"
-                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div> --}}
+
 
 
     </form>
