@@ -15,9 +15,9 @@ new vendor file will be inserted to `resoureces/views`
 
 To cuztomize default breeze verify email and reset password
 
-> click vendor outside app folder and navigate
+click vendor outside app folder and navigate
 
-`vendor/laravel/framework/src/illuminate/Auth/notifications`
+> vendor/laravel/framework/src/illuminate/Auth/notifications
 
 you will find `ResetPassword.php` and `VerifyEmail.php`
 		
