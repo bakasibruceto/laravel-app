@@ -1,4 +1,4 @@
-![image](https://github.com/bakasibruceto/laravel-app/assets/95122978/f4119303-b706-423c-947a-0fe61e718f54)# Laravel 10
+Laravel 10
 
 ## Cuztomize Email Template Breeze
 Type to Terminal
@@ -23,9 +23,11 @@ you will find `ResetPassword.php` and `VerifyEmail.php`
 		
 copy the code insde the class and copy necessary use cases to your new notification file
 
-go to user model add
+go to user model add to class
 
     class User extends Authenticatable implements MustVerifyEmail
+
+add code inside class
 
 
     public function sendPasswordResetNotification($token){
