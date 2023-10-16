@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,18 +15,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// First time
 Route::get('/', function () {
     return view('auth.login');
-});
+})->name('login');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Authenticated users
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/home', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
-Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+// Logged in
+Route::get('/home', [HomeController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('home');
+
+// Handle undefined routes (for all users)
+Route::fallback(function () {  
+    if (auth()->check()) {
+        return redirect()->route('home');
+    }
+    // For non-authenticated users, redirect to the login page
+    return redirect()->route('login');
+});
+
+require __DIR__ . '/auth.php';
