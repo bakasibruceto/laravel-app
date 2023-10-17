@@ -29,6 +29,11 @@ go to user model add to class
 
     class User extends Authenticatable implements MustVerifyEmail
 
+add use case
+
+    use App\Notifications\NewEmailVerificationNotification;
+    use App\Notifications\NewResetPasswordNotification;
+
 add code inside class
 
 
