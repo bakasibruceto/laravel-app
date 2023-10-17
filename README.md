@@ -1,5 +1,5 @@
 # Instructions
-- Create database named `laravel` in phpmyadmin
+- Create database named `laravel` in phpmyadmin a
 - Open terminal in VSCode and type `php artisan migrate`
 - Type `php artisan serve` to run server
 - If error occurs type `composer update` then run serve
