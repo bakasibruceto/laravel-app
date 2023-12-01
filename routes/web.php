@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Chat\Index;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,9 @@ Route::fallback(function () {
     }
     // For non-authenticated users, redirect to the login page
     return redirect()->route('login');
+});
+Route::middleware('auth')->group(function (){
+    Route::get('/chat',Index::class)->name('chat.index'); 
 });
 
 require __DIR__ . '/auth.php';
